@@ -50,4 +50,7 @@ class AppCoordinator {
 
   static Future<T?> showProfile<T extends Object?>() =>
       context.pushNamed<T>(AppRouteNames.profile.name);
+
+  static Future<T?> showFriendsScreen<T extends Object?>() =>
+      context.pushNamed<T>(AppRouteNames.friends.name);
 }

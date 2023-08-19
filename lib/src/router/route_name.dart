@@ -11,8 +11,11 @@ enum AppRouteNames {
     paramName: 'id',
   ),
   profile(path: '/profile'),
+  friends(path: '/friends'),
   settings(path: '/settings'),
-  photoView(path: '/photoView');
+  photoView(path: '/photoView'),
+  chatRooms(path: '/chatRooms'),
+  chatRoomDetail(path: '/chatRoomDetail');
 
   const AppRouteNames({
     required this.path,
@@ -31,6 +34,6 @@ enum AppRouteNames {
     return path.replaceFirst('/', '');
   }
 
-  String get buildPathParam => '$path:$paramName';
-  String get buildSubPathParam => '$subPath:$paramName';
+  String get buildPathParam => '$path:${paramName!}';
+  String get buildSubPathParam => '$subPath:${paramName!}';
 }
